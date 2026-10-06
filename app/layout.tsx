@@ -9,11 +9,11 @@ export const metadata: Metadata = {
     icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
     shortcut: '/icon.svg',
   },
-  title: 'NOVATEK International | AI, Robotics & Data Solutions',
-  description: 'AI, robotics and data solutions for manufacturers and logistics operators, from business assessment and pilot deployment to integration and lifecycle support.',
+  title: 'NOVATEK International | AI, Robotics & Products of the Future',
+  description: 'NOVATEK develops, integrates and commercializes intelligent robotic systems and AI products for global markets.',
   openGraph: {
-    title: 'NOVATEK International | AI, Robotics & Data Solutions',
-    description: 'Practical AI, robotics and data solutions for manufacturing and logistics operations.',
+    title: 'NOVATEK International | AI, Robotics & Products of the Future',
+    description: 'We develop, integrate and commercialize intelligent robotic systems and AI products for global markets.',
     url: '/',
     siteName: 'NOVATEK International',
     images: [{ url: '/images/hero-robotics.webp', width: 2056, height: 765 }],
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NOVATEK International | AI, Robotics & Data Solutions',
-    description: 'Practical AI, robotics and data solutions for manufacturing and logistics operations.',
+    title: 'NOVATEK International | AI, Robotics & Products of the Future',
+    description: 'We develop, integrate and commercialize intelligent robotic systems and AI products for global markets.',
     images: ['/images/hero-robotics.webp'],
   },
 };
@@ -35,9 +35,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     name: 'NOVATEK International',
     url: 'https://www.novatek-international.com',
     email: 'sergey@novatek-international.com',
-    telephone: '+380671234567',
-    description: 'AI, robotics, automation and data solutions for manufacturing and logistics operations.',
-    areaServed: ['Europe', 'Asia'],
+    telephone: '+380968868184',
+    description: 'NOVATEK builds, integrates and commercializes AI and robotic technologies for global markets.',
+    areaServed: ['Europe', 'Ukraine', 'China', 'Global'],
   };
 
   return <html lang="en"><body><Header />{children}<Footer /><ClientEnhancements /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }} /></body></html>;
