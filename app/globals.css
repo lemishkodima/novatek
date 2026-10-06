@@ -5,6 +5,14 @@
 @media(max-width:400px){.site-header{padding-inline:14px}.brand-name{font-size:12px}.site-header>.button{padding:0 10px;font-size:9px}.wrap{width:calc(100% - 32px)}.hero-actions{gap:8px}.hero-actions .button{padding:0 12px;gap:10px;font-size:10px}.hero-index{width:calc(100% - 32px)}.detail-card ul{grid-template-columns:1fr}}
 
 /* Readability pass */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{font-variant-emoji:text}
+.button{-webkit-appearance:none;appearance:none;border-radius:0}
+
+/* Keep directional arrows as monochrome text in iOS Safari. */
+.button>span,.text-link>span,.text-arrow,.card-arrow,.industry-list i,.build-card i,.contact-options i{font-size:0!important;font-style:normal;font-family:Arial,Helvetica,sans-serif}
+.button>span::before,.text-link>span::before,.text-arrow::before,.card-arrow::before,.industry-list i::before,.build-card i::before,.contact-options i::before{content:'\2197\FE0E';font:400 17px/1 Arial,Helvetica,sans-serif}
+.detail-card li:before{content:'\2197\FE0E';font-family:Arial,Helvetica,sans-serif}
 .main-nav a{font-size:12px}
 .button{font-size:13px}
 .button-small{font-size:11px}

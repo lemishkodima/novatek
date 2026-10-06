@@ -34,7 +34,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     '@type': 'Organization',
     name: 'NOVATEK International',
     url: 'https://international-novatek.com',
-    email: 'sergey@novatek-international.com',
+    email: 'serhii@novatek-international.com',
     telephone: '+380968868184',
     description: 'NOVATEK builds, integrates and commercializes AI and robotic technologies for global markets.',
     areaServed: ['Europe', 'Ukraine', 'China', 'Global'],

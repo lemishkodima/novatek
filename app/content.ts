@@ -106,16 +106,16 @@ export const pages: Record<string, SitePage> = {
       { title: 'Why NOVATEK International', items: ['International approach: cooperation with partners and manufacturers across Europe, Asia and other markets', 'Technology expertise: a focus on AI, robotics, automation and data', 'Business-oriented approach: measurable business results guide the technology choice', 'End-to-end solutions: support from first consultation through full-scale implementation'] },
       { title: 'How we work', items: ['Discovery: understand the business, workflows and challenges', 'Analysis: identify where AI or robotics can have the greatest impact', 'Solution design: create the solution architecture', 'Technology selection: choose AI models, robots, sensors and software', 'Pilot project: launch a controlled pilot', 'Integration: fit the solution into business processes', 'Scale: expand the solution across operations', 'Support: maintain and develop the system'] },
       { title: 'A client-centric approach', body: 'Every business has different processes, constraints and goals. We analyze each client’s business and design a technology system around specific objectives and measurable outcomes, supporting the journey from analysis and solution design through implementation, scaling and technical support.' },
-      { title: 'Leadership', body: 'Sergey Sergov — Founder & CEO. Building NOVATEK at the intersection of AI, robotics, data and global technology partnerships.' },
+      { title: 'Leadership', body: 'Serhii Sergov — Founder & CEO. Building NOVATEK at the intersection of AI, robotics, data and global technology partnerships.' },
     ],
   },
   contact: {
     label: 'Contact', eyebrow: 'Get in touch', title: 'Let’s build the future together.',
     intro: 'Looking to automate your business, integrate robotics, apply AI or build a new technology product? Start with a consultation, a business process assessment or a pilot project.',
     sections: [
-      { title: 'Sergey Sergov', body: 'Founder & CEO' },
-      { title: 'Let’s build a smarter tomorrow.', items: ['Phone: +380 96 886 81 84', 'Founder: sergey@novatek-international.com', 'General: info@novatek-international.com', 'Partnerships: partnerships@novatek-international.com', 'Robotics: robotics@novatek-international.com', 'Website: international-novatek.com'] },
-      { title: 'Start a conversation', body: 'Book a meeting, discuss your project or explore a partnership. Email Sergey directly and share a little about what you are looking to achieve.' },
+      { title: 'Serhii Sergov', body: 'Founder & CEO' },
+      { title: 'Let’s build a smarter tomorrow.', items: ['Phone: +380 96 886 81 84', 'Founder: serhii@novatek-international.com', 'General: info@novatek-international.com', 'Partnerships: partnerships@novatek-international.com', 'Robotics: robotics@novatek-international.com', 'Website: international-novatek.com'] },
+      { title: 'Start a conversation', body: 'Book a meeting, discuss your project or explore a partnership. Email Serhii directly and share a little about what you are looking to achieve.' },
     ],
   },
 };
