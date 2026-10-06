@@ -77,3 +77,94 @@ body{font-size:16px}
 .industry-photo{animation:floatImage 9s ease-in-out infinite}
 @media (prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
 @media(max-width:760px){.hero-copy,.page-intro{font-size:16px}.body-copy{font-size:16px}.solution-card p,.detail-card p{font-size:15px}.detail-card li{font-size:14px}.main-nav a{font-size:14px}}
+
+/* Navigation */
+.solutions-menu{position:relative}
+.solutions-menu summary{list-style:none;cursor:pointer;font-size:13px;color:#ccd3d9;display:flex;align-items:center;gap:6px;padding:28px 0}
+.solutions-menu summary::-webkit-details-marker{display:none}
+.solutions-menu summary span{font-size:11px;color:#8da5b9}
+.solutions-menu>div{position:absolute;top:66px;left:-20px;width:230px;padding:10px;background:#101f2e;border:1px solid rgba(255,255,255,.14);box-shadow:0 18px 40px #0007;display:flex;flex-direction:column}
+.solutions-menu>div a{padding:12px 10px;border-bottom:1px solid rgba(255,255,255,.1)}
+.solutions-menu>div a:last-child{border-bottom:0}
+.solutions-menu:not([open])>div{display:none}
+
+/* Trust and conversion content */
+.trust-strip{background:#dce5ec;color:var(--ink);border-bottom:1px solid #c4d0d9}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust-grid div{padding:28px 26px;border-left:1px solid #bdcbd5;display:flex;flex-direction:column;gap:8px}
+.trust-grid div:first-child{border-left:0;padding-left:0}
+.trust-grid strong{font:700 15px/1.3 'Manrope',sans-serif}
+.trust-grid span{font-size:12px;line-height:1.55;color:#50606d}
+.journey-section{padding:72px 0;color:var(--ink);border-bottom:1px solid var(--dark-line)}
+.journey-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:32px}
+.journey-heading h2{font:600 36px/1.15 'Manrope',sans-serif;letter-spacing:-1.3px;margin:0}
+.journey-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--dark-line)}
+.journey-grid article{padding:26px 24px 8px;border-left:1px solid var(--dark-line)}
+.journey-grid article:first-child{padding-left:0;border-left:0}
+.journey-grid article>span{font-size:10px;color:#66849d}
+.journey-grid h3{font:700 17px/1.3 'Manrope',sans-serif;margin:15px 0 9px}
+.journey-grid p{font-size:14px;line-height:1.7;color:#5c6975;margin:0}
+.industry-detail-grid{grid-template-columns:repeat(2,1fr)}
+.industry-detail-grid .detail-card{scroll-margin-top:95px}
+.detail-card-image{height:210px;background-size:cover;background-position:center;margin-bottom:24px;overflow:hidden}
+.industry-challenge{color:#263846!important}
+.industry-challenge strong{color:#0e1e2c}
+.industry-cta{margin-top:20px}
+
+/* Contact action page */
+.contact-action{color:var(--ink)}
+.contact-action-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px 9%}
+.contact-action h2{font:600 44px/1.1 'Manrope',sans-serif;letter-spacing:-1.5px;margin:0 0 5px}
+.contact-role{font-size:14px;color:#6d7c88;margin:0 0 24px}
+.contact-options{border-top:1px solid var(--dark-line)}
+.contact-options a{min-height:82px;border-bottom:1px solid var(--dark-line);display:grid;grid-template-columns:90px 1fr auto;gap:18px;align-items:center}
+.contact-options span{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#71818e}
+.contact-options strong{font:600 16px 'Manrope',sans-serif;overflow-wrap:anywhere}
+.contact-options i{font-style:normal;font-size:19px;color:#6d8da7}
+.contact-brief{grid-column:1/3;background:#e4e9ed;padding:34px 38px;display:grid;grid-template-columns:.7fr 1.4fr auto;gap:35px;align-items:center}
+.contact-brief h3{font:700 20px 'Manrope',sans-serif;margin:0}
+.contact-brief ol{margin:0;padding-left:20px;color:#50606d;font-size:14px;line-height:1.8}
+
+/* Scroll-triggered motion */
+.section-heading,.industry-intro,.about-copy,.process-wrap>div:first-child,.partner-row>div:first-child,.contact-row>div:first-child,.solution-card,.industry-list a,.process-step,.detail-card,.about-facts,.journey-heading,.journey-grid article{animation:none}
+[data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+[data-reveal].is-visible{opacity:1;transform:translateY(0)}
+.solution-card:nth-child(2),.journey-grid article:nth-child(2){transition-delay:.08s}
+.solution-card:nth-child(3),.journey-grid article:nth-child(3){transition-delay:.16s}
+.journey-grid article:nth-child(4){transition-delay:.24s}
+.industry-photo{animation:none;transform:scale(1.015)}
+.about-image:hover{animation:none;transform:scale(1.015);transition:transform .7s ease}
+
+/* Keyboard and contrast accessibility */
+a:focus-visible,summary:focus-visible{outline:3px solid #8fc7f5;outline-offset:4px}
+.eyebrow{color:#d2dce4}
+.eyebrow-dark{color:#526573}
+.detail-number,.industry-list span{color:#587b98}
+.footer-links a,.footer-main p,.footer-bottom{color:#aebbc5}
+@media(prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none;transition:none}.about-image:hover,.industry-photo{transform:none}}
+
+@media(max-width:900px){
+  .trust-grid{grid-template-columns:repeat(2,1fr)}
+  .trust-grid div:nth-child(3){border-left:0}
+  .journey-grid{grid-template-columns:repeat(2,1fr)}
+  .journey-grid article:nth-child(3){border-left:0}
+  .contact-action-grid{grid-template-columns:1fr}
+  .contact-brief{grid-column:1;grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .trust-grid{grid-template-columns:1fr}
+  .trust-grid div,.trust-grid div:first-child{padding:20px 0;border-left:0;border-bottom:1px solid #bdcbd5}
+  .trust-grid div:last-child{border-bottom:0}
+  .journey-section{padding:55px 0}
+  .journey-heading{display:block}
+  .journey-heading h2{font-size:31px}
+  .journey-grid{grid-template-columns:1fr}
+  .journey-grid article,.journey-grid article:first-child{border-left:0;border-bottom:1px solid var(--dark-line);padding:22px 0}
+  .industry-detail-grid{grid-template-columns:1fr}
+  .detail-card-image{height:190px}
+  .contact-action-grid{gap:35px}
+  .contact-action h2{font-size:36px}
+  .contact-options a{grid-template-columns:70px 1fr auto;gap:10px;min-height:76px}
+  .contact-options strong{font-size:14px}
+  .contact-brief{padding:28px 24px;gap:20px}
+}

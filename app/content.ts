@@ -1,6 +1,7 @@
 export type SitePage = {
   label: string; title: string; eyebrow: string; intro: string; image?: string;
-  sections: { title: string; body?: string; items?: string[] }[];
+  journey?: { problem: string; deliverable: string; pilot: string; integration: string };
+  sections: { title: string; body?: string; items?: string[]; id?: string; image?: string; challenge?: string; nextStep?: string }[];
 };
 
 export const nav = [
@@ -15,6 +16,7 @@ export const pages: Record<string, SitePage> = {
   solutions: {
     label: 'Solutions', eyebrow: 'What we do', title: 'Technology that moves business forward.',
     intro: 'NOVATEK International brings artificial intelligence, robotics, automation and data together to solve practical business challenges.', image: '/images/robotics-data.webp',
+    journey: { problem: 'Disconnected processes, limited visibility and repetitive work slow operations and make scaling harder.', deliverable: 'A tailored solution architecture combining the right AI models, robotics, sensors, software and data.', pilot: 'A controlled pilot validates the workflow, technical fit and success criteria before wider investment.', integration: 'The validated solution is integrated into operations, scaled across sites and supported through its lifecycle.' },
     sections: [
       { title: 'Artificial intelligence', body: 'We develop and integrate AI for process automation, data analysis, forecasting, quality control and decision-making. Our systems can support manufacturing, logistics, service operations, construction and other industries.', items: ['Machine learning', 'Computer vision', 'Generative AI', 'Predictive analytics', 'Intelligent automation', 'AI agents and assistants', 'Process optimization'] },
       { title: 'Robotics and automation', body: 'We help companies select, integrate and deploy robotic systems for specific applications, from ready-made robots to custom solutions designed around a process.', items: ['Industrial, humanoid and service robots', 'Logistics and construction robots', 'Manufacturing robots', 'Automated robotic systems', 'Robotic vision systems', 'Human–robot collaboration'] },
@@ -24,6 +26,7 @@ export const pages: Record<string, SitePage> = {
   robotics: {
     label: 'Robotics', eyebrow: 'Robotics & automation', title: 'Robotics that work in the real world.',
     intro: 'Move from an initial idea to a fully operational robotic solution, designed around the work your business needs to get done.', image: '/images/hero-robotics.webp',
+    journey: { problem: 'Repetitive, hazardous or capacity-limited operations constrain production and logistics teams.', deliverable: 'Robot selection, cell design, software adaptation, AI vision and integration around the target process.', pilot: 'We test the robot, workflow, safety requirements and operating assumptions in a controlled environment.', integration: 'Deployment includes technical integration, staff training, monitoring, maintenance and scale-up support.' },
     sections: [
       { title: 'Integration from idea to operation', body: 'We support the full lifecycle, from selecting the right manufacturer and equipment to integrating robots into business operations, training staff and providing ongoing service.', items: ['Business process analysis', 'Automation opportunity assessment', 'Robot and manufacturer selection', 'Technical and software integration', 'AI integration and testing', 'Deployment, staff training and support'] },
       { title: 'Robotic systems', body: 'We work with ready-made robots and complete custom solutions for manufacturing and operational environments.', items: ['Industrial and manufacturing robots', 'Humanoid and service robots', 'Logistics and construction robots', 'Automated robotic systems', 'Robotic vision systems', 'Human–robot collaboration'] },
@@ -33,7 +36,8 @@ export const pages: Record<string, SitePage> = {
   },
   ai: {
     label: 'AI', eyebrow: 'Artificial intelligence', title: 'AI solutions for real business challenges.',
-    intro: 'We develop and integrate practical AI that helps teams automate processes, understand data, anticipate change and make better decisions.', image: '/images/robotics-data.webp',
+    intro: 'We develop and integrate practical AI that helps manufacturing and logistics teams automate processes, improve quality control and make faster operational decisions.', image: '/images/ai-computer-vision.webp',
+    journey: { problem: 'Manual inspection, fragmented information and delayed decisions create waste, defects and avoidable downtime.', deliverable: 'Production-ready computer vision, predictive analytics, AI assistants or intelligent automation fitted to the workflow.', pilot: 'A focused pilot uses representative data and agreed success criteria to validate accuracy and operational value.', integration: 'The approved system connects to existing tools and processes, with monitoring, staff enablement and ongoing improvement.' },
     sections: [
       { title: 'From data to decisions', body: 'Our AI systems can be integrated into manufacturing, logistics, service operations, construction and other industries. We focus on solutions that fit the process and deliver measurable business results.', items: ['Machine learning and predictive analytics', 'Computer vision and quality control', 'Generative AI', 'Intelligent automation and process optimization', 'AI agents and assistants'] },
       { title: 'AI partnerships', body: 'We collaborate with AI companies on integration and development for real-world operations.', items: ['AI model integration', 'Computer vision', 'Dataset production', 'AI agents and robotics AI', 'Multimodal and industrial AI', 'AI infrastructure'] },
@@ -42,7 +46,8 @@ export const pages: Record<string, SitePage> = {
   },
   data: {
     label: 'Data', eyebrow: 'Data & dataset development', title: 'Data that makes AI smarter.',
-    intro: 'We transform raw information into structured, reliable assets that help AI systems learn and perform in practical environments.', image: '/images/robotics-data.webp',
+    intro: 'We transform raw operational and sensor data into structured, reliable datasets for robotics, computer vision and industrial AI.', image: '/images/data-lidar-capture.webp',
+    journey: { problem: 'AI initiatives stall when data is incomplete, inconsistent, poorly labeled or disconnected from real operating conditions.', deliverable: 'A documented dataset with collection, annotation, validation and quality-control workflows matched to the model objective.', pilot: 'A representative sample confirms the taxonomy, annotation rules, quality threshold and production effort.', integration: 'The approved data pipeline scales to ongoing collection, versioning, model training and continuous quality review.' },
     sections: [
       { title: 'Data for intelligent systems', body: 'NOVATEK International creates, structures and prepares data for training, testing and improving artificial intelligence models.', items: ['Image, video and audio datasets', 'Sensor and text data', '3D data and LiDAR', 'Robotics datasets', 'Computer vision datasets'] },
       { title: 'Robotics dataset development', body: 'A strategic focus area is collecting and structuring real-world data to train robots for practical tasks.', items: ['Object movement and recognition', 'Grasping and manipulation', 'Navigation and sorting', 'Tool use and cleaning', 'Table setting and logistics tasks', 'Manufacturing operations and human interaction'] },
@@ -53,13 +58,13 @@ export const pages: Record<string, SitePage> = {
     label: 'Industries', eyebrow: 'Industries we serve', title: 'Applied technology for every operation.',
     intro: 'We work with organizations to tailor technology to the unique challenges of their industries and operating environments.', image: '/images/industry-automation.webp',
     sections: [
-      { title: 'Manufacturing', body: 'Robotics and AI for production environments.', items: ['Repetitive operation automation', 'Quality control', 'Predictive maintenance', 'Production process optimization'] },
-      { title: 'Logistics & warehousing', items: ['Autonomous transportation and sorting', 'Picking and inventory management', 'Warehouse analytics', 'Delivery automation'] },
-      { title: 'Construction', items: ['Construction robotics', 'AI work progress monitoring', 'Computer vision and automated measurements', 'Quality control and robotic finishing', 'Digital construction monitoring'] },
-      { title: 'Retail & service', items: ['Customer service robots', 'Robotic waiters and delivery', 'Cleaning automation', 'AI customer support', 'Automated order taking'] },
-      { title: 'Hospitality & restaurants', items: ['Guest reception and recommendations', 'Order taking and delivery', 'Table setting and clearing', 'Navigation and customer interaction'] },
-      { title: 'Energy', items: ['Predictive maintenance and monitoring', 'Analytics and computer vision', 'Infrastructure inspection', 'Energy optimization'] },
-      { title: 'Agriculture', items: ['Autonomous robots and crop monitoring', 'Computer vision and harvesting systems', 'Smart irrigation', 'Farm automation'] },
+      { id: 'manufacturing', title: 'Manufacturing', image: '/images/ai-computer-vision.webp', challenge: 'Reduce repetitive work, defects and unplanned downtime while protecting production continuity.', body: 'Combine robotic automation, machine vision, predictive maintenance and production analytics around a defined process.', items: ['Repetitive operation automation', 'Quality control', 'Predictive maintenance', 'Production process optimization'], nextStep: 'Assess a production process' },
+      { id: 'logistics', title: 'Logistics & warehousing', image: '/images/industry-automation.webp', challenge: 'Increase throughput and inventory visibility without adding avoidable manual handling.', body: 'Apply autonomous transportation, sorting, picking and warehouse analytics to the highest-impact workflow.', items: ['Autonomous transportation and sorting', 'Picking and inventory management', 'Warehouse analytics', 'Delivery automation'], nextStep: 'Review a warehouse workflow' },
+      { id: 'construction', title: 'Construction', image: '/images/construction-inspection.webp', challenge: 'Improve progress visibility, measurement consistency and quality control across dynamic sites.', body: 'Use inspection robotics, computer vision and digital monitoring for repeatable field data and faster decisions.', items: ['Construction robotics', 'AI work progress monitoring', 'Computer vision and automated measurements', 'Quality control and robotic finishing'], nextStep: 'Discuss an inspection pilot' },
+      { id: 'retail-service', title: 'Retail & service', challenge: 'Maintain service quality while automating repetitive customer and facility tasks.', body: 'Introduce service robotics and AI support in a controlled customer-facing workflow.', items: ['Customer service robots', 'Robotic delivery', 'Cleaning automation', 'AI customer support'], nextStep: 'Explore a service pilot' },
+      { id: 'hospitality', title: 'Hospitality & restaurants', challenge: 'Support staff during routine service tasks and improve consistency during peak demand.', body: 'Pilot reception, order, delivery or table-service automation within a clearly defined guest journey.', items: ['Guest reception and recommendations', 'Order taking and delivery', 'Table setting and clearing', 'Navigation and customer interaction'], nextStep: 'Map a guest workflow' },
+      { id: 'energy', title: 'Energy', challenge: 'Inspect infrastructure and detect developing issues with less manual exposure and delay.', body: 'Combine remote monitoring, computer vision, inspection data and predictive analytics.', items: ['Predictive maintenance and monitoring', 'Analytics and computer vision', 'Infrastructure inspection', 'Energy optimization'], nextStep: 'Assess an inspection process' },
+      { id: 'agriculture', title: 'Agriculture', challenge: 'Monitor crops and automate field operations with more consistent data and execution.', body: 'Apply autonomous systems, computer vision and targeted automation to a priority farm operation.', items: ['Autonomous robots and crop monitoring', 'Computer vision and harvesting systems', 'Smart irrigation', 'Farm automation'], nextStep: 'Discuss an agriculture pilot' },
     ],
   },
   partners: {
