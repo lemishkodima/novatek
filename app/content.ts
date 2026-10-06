@@ -114,7 +114,7 @@ export const pages: Record<string, SitePage> = {
     intro: 'Looking to automate your business, integrate robotics, apply AI or build a new technology product? Start with a consultation, a business process assessment or a pilot project.',
     sections: [
       { title: 'Sergey Sergov', body: 'Founder & CEO' },
-      { title: 'Let’s build a smarter tomorrow.', items: ['Phone: +380 96 886 81 84', 'Founder: sergey@novatek-international.com', 'General: info@novatek-international.com', 'Partnerships: partnerships@novatek-international.com', 'Robotics: robotics@novatek-international.com', 'Website: www.novatek-international.com'] },
+      { title: 'Let’s build a smarter tomorrow.', items: ['Phone: +380 96 886 81 84', 'Founder: sergey@novatek-international.com', 'General: info@novatek-international.com', 'Partnerships: partnerships@novatek-international.com', 'Robotics: robotics@novatek-international.com', 'Website: international-novatek.com'] },
       { title: 'Start a conversation', body: 'Book a meeting, discuss your project or explore a partnership. Email Sergey directly and share a little about what you are looking to achieve.' },
     ],
   },

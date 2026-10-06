@@ -4,7 +4,7 @@ import { Header, Footer } from './components/SiteChrome';
 import ClientEnhancements from './components/ClientEnhancements';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.novatek-international.com'),
+  metadataBase: new URL('https://international-novatek.com'),
   icons: {
     icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
     shortcut: '/icon.svg',
@@ -33,7 +33,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'NOVATEK International',
-    url: 'https://www.novatek-international.com',
+    url: 'https://international-novatek.com',
     email: 'sergey@novatek-international.com',
     telephone: '+380968868184',
     description: 'NOVATEK builds, integrates and commercializes AI and robotic technologies for global markets.',
