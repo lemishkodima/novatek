@@ -5,6 +5,10 @@ import ClientEnhancements from './components/ClientEnhancements';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.novatek-international.com'),
+  icons: {
+    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
+    shortcut: '/icon.svg',
+  },
   title: 'NOVATEK International | AI, Robotics & Data Solutions',
   description: 'AI, robotics and data solutions for manufacturers and logistics operators, from business assessment and pilot deployment to integration and lifecycle support.',
   openGraph: {
