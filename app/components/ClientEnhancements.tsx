@@ -19,12 +19,16 @@ export default function ClientEnhancements() {
     const targets = document.querySelectorAll<HTMLElement>('[data-reveal]');
 
     if (reducedMotion || !('IntersectionObserver' in window)) {
-      targets.forEach((target) => target.classList.add('is-visible'));
+      targets.forEach((target) => {
+        target.classList.remove('reveal-pending');
+        target.classList.add('is-visible');
+      });
     } else {
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
+              entry.target.classList.remove('reveal-pending');
               entry.target.classList.add('is-visible');
               observer.unobserve(entry.target);
             }
@@ -32,7 +36,12 @@ export default function ClientEnhancements() {
         },
         { threshold: 0.12, rootMargin: '0px 0px -48px' },
       );
-      targets.forEach((target) => observer.observe(target));
+      targets.forEach((target) => {
+        const isBelowInitialViewport = target.getBoundingClientRect().top > window.innerHeight * 0.9;
+        if (isBelowInitialViewport) target.classList.add('reveal-pending');
+        else target.classList.add('is-visible');
+        observer.observe(target);
+      });
       return () => observer.disconnect();
     }
   }, []);
